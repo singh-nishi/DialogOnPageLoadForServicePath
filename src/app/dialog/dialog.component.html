@@ -1,0 +1,11 @@
+<div [@dialog] *ngIf="visible" class="dialog">
+  <ng-content></ng-content>
+  <h1>Enter Value</h1>
+  <input id="input" focus="true" [(ngModel)]="ip" style="width:90%;" />
+  <br>
+  <br>
+  <br>
+  <button class="btn" (click)="close()">OKK</button>
+  <button *ngIf="closable" (click)="close()" aria-label="Close" class="dialog__close-btn">X</button>
+</div>
+<div *ngIf="visible" class="overlay" (click)="close()"></div>
